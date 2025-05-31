@@ -51,6 +51,7 @@ jobs:
             BUILD_TIME=${{ env.BUILD_TIME }}
             GIT_REVISION=${{ env.GIT_REVISION }}
             NOVNC_VERSION=${{ env.NOVNC_VERSION }}
+            WEBSOCKIFY_VERSION=${{ env.WEBSOCKIFY_VERSION }}
           tags: |
             ${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
             ${{ env.DOCKERHUB_REPO }}:latest

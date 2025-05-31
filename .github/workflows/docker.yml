@@ -32,8 +32,6 @@ jobs:
           echo APP_VERSION=`git describe --tags --always | sed "s/v//"` >> $GITHUB_ENV
           echo BUILD_TIME=`date -u +"%FT%TZ"` >> $GITHUB_ENV
           echo GIT_REVISION=`git rev-parse HEAD` >> $GITHUB_ENV
-      - name: Download noVNC
-        run: wget https://github.com/novnc/noVNC/archive/refs/tags/v${{ env.NOVNC_VERSION }}.tar.gz -O noVNC.tar.gz
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2

@@ -21,6 +21,10 @@ ENV WEBSOCKIFY_VERSION ${WEBSOCKIFY_VERSION}
 WORKDIR /app
 
 # noVNC web files
-COPY --from=builder /app/web ./
+COPY --from=builder /app/web/ ./web
 
-CMD ["/app/websockify", "server", "--web", "./web"]
+COPY ./entrypoint.sh ./
+RUN chmod +x ./entrypoint.sh
+
+# CMD ["/app/websockify", "server", "--web", "./web", "--vnc", "$VNC_SERVER"]
+ENTRYPOINT ["/app/entrypoint.sh"]

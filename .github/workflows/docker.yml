@@ -10,7 +10,7 @@ env:
   APP_NAME: novnc
   DOCKERHUB_REPO: isayme/novnc
   NOVNC_VERSION: 1.6.0
-  WEBSOCKIFY_VERSION: 0.0.1
+  WEBSOCKIFY_VERSION: 0.1.0
 
 jobs:
   main:
